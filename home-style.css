@@ -1,0 +1,1224 @@
+/* BASIC STYLES */
+@font-face {
+  font-family: "Pathe";
+  src: url("./font/Trade-Gothic-Bold-Font.otf");
+  font-weight: bold;
+}
+
+:root {
+  --pathe-kleur: rgb(255, 200, 40);
+  --achtergrond-kleur: rgb(42, 42, 42);
+  --pathe-gradient: linear-gradient(0deg, rgba(255, 197, 42, 1) 0%, rgba(246, 218, 103, 1) 100%);
+  --text-color: white;
+  --carousel-slide: 17%;
+  --theme-pink: #ffb3b6;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./images/fullbackground.png");
+  background-size: 100%;
+  z-index: -3;
+}
+
+button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8em 1.875em;
+  background: var(--pathe-gradient);
+  border: none;
+  border-radius: 6px;
+  font-family: "Pathe";
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .12);
+}
+
+h1 {
+  color: var(--pathe-kleur);
+  font-family: "Pathe";
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  border: none;
+}
+
+button img {
+  max-width: 100%;
+  border: none;
+  width: 1em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+
+h2, h3 {
+  color: var(--text-color);
+  font-family: "Pathe";
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Arial";
+  color: white;
+  margin: 1em 0;
+  line-height: 1.5;
+}
+
+section {
+  gap: 10em;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+nav ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1em;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li img {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+}
+
+nav a {
+  text-decoration: none; /* Haalt lijnen weg onder a */ 
+  font-family: "Arial";
+  text-transform: capitalize;
+  color: inherit; /* zorgt ervoor dat het de tekstkleur inherit */
+  margin-top: 0; /* nooit margin tussen afbeelding and text */
+}
+
+body, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+/* ------ Test ------ */
+
+body {
+  background-color: #000000;
+}
+
+/* ------ Focus ------ */
+/* ------ * pakt ieder element op de pagina ------ */
+
+*:focus {
+  outline: 2px solid orangered;
+  outline-offset: 2px;
+  border-radius: 1em;
+}
+
+button:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+  border-radius: 1em;
+}
+
+/* ------ NAV STYLING ------ */
+
+header {
+  background-color: var(--pathe-kleur);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1000;  /* laat het bovenaan alle content staan, eerst scrollde de fotos eroverheen */
+}
+
+header nav,
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: sticky;
+  top: 0;
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+nav ul,
+header ul {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header ul li img {
+  max-height: 2.3em;
+  padding: 10px 20px;
+  position: relative; /* Voeg toe voor pseudo-element, bedoelt om specifieke onderdelen van een element te stijlen */
+}
+
+header ul li {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+header ul li a {
+  display: block;
+  color: inherit;
+}
+
+/* ------- WHITESPACE ON EVERYTHING EXCEPT CAROUSELS ------- */
+
+
+main section:nth-of-type(1) {
+  width: 90%;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 2em 0;
+  margin-bottom: 2em;
+}
+
+main section:nth-of-type(3), main section:nth-of-type(4) {
+  width: 90%;
+  max-width: 95%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+
+
+/* ------- BUTTON STYLING CAROUSEL ------- */
+
+main section:nth-of-type(2),
+main section:nth-of-type(5) {
+  overflow: visible;
+  position: relative;
+}
+
+main section:nth-of-type(5) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main section:nth-of-type(5) h2 {
+  margin: 1em 0 0;
+  align-self: flex-start;
+  padding-left: 5%;
+}
+
+main section:nth-of-type(2) button,
+main section:nth-of-type(5) button {
+  position: absolute;
+  top: 50%;
+  width: 5em;
+  height: 5em;
+  z-index: 700;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+}
+
+main section:nth-of-type(2) button:hover,
+main section:nth-of-type(5) button:hover {
+  background: rgba(50, 50, 50, 0.8);
+}
+
+main section:nth-of-type(2) button:hover::before, main section:nth-of-type(5) button:hover::before {
+  filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Change arrow color to yellow */
+}
+
+main section:nth-of-type(2) button::before,
+main section:nth-of-type(5) button::before {
+  content: '';
+  width: 60%;
+  height: 60%;
+  background: url('./images/arrow-r.svg') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main section:nth-of-type(2) button:nth-of-type(1)::before, main section:nth-of-type(5) button:nth-of-type(1)::before {
+  background-image: url('./images/arrow-r.svg'); /* Left arrow */
+}
+
+main section:nth-of-type(2) button:nth-of-type(2)::before, main section:nth-of-type(5) button:nth-of-type(2)::before {
+  background-image: url('./images/arrow-r.svg'); /* Right arrow */
+}
+
+
+/* ------- KNOPPEN OP DE TOP ------- */
+
+main section:nth-of-type(1) ul {
+  display: flex;
+  padding: 4em 1em 0;
+  margin: 0;
+  list-style: none;
+  gap: 1em;
+  width: 100%;
+}
+
+main section:nth-of-type(1) ul li {
+  font-size: 1.5em;
+  font-family: "Pathe";
+  color: var(--pathe-kleur);
+  text-transform: uppercase;
+}
+
+main section:nth-of-type(1) ul li:first-of-type {
+  color: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+
+/* ------- FORM ------- */
+
+form {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  padding: 0.7em;
+  background-color: white;
+  border-radius: 0.5em;
+  font-size: 16px;
+  margin: 2em auto;
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  color: black;
+}
+
+form input[type="image"] {
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+  border-radius: 0.5em;
+}
+
+form input[type="text"]:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* FILM CAROUSEL THINGIE */
+
+main section:nth-of-type(2) {
+  position: relative;
+  max-width: 1200px;
+  height: 30em;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+main section:nth-of-type(2) ul {
+  display: flex;
+  justify-content: center;
+    transition: transform 0.5s ease-in-out;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    list-style: none;
+    gap: 2.75em;
+}
+
+main section:nth-of-type(2) li {
+  min-width: 47svw;
+  height: 70vw;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.3s ease, font-size 0.3s ease; /* Overgangen toegevoegd */
+}
+
+main section:nth-of-type(2) button:nth-of-type(1), main section:nth-of-type(4) button:nth-of-type(1) {
+  transform: translateY(-50%) rotate(180deg); /* draait de arrow om 180* */
+}
+
+main section:nth-of-type(2) button:nth-of-type(2) {
+  right: 10px;
+}
+
+/* Achtergrondafbeeldingen voor elke slide */
+main section:nth-of-type(2) li:nth-of-type(1) {
+  background-image: url("./images/wicked.png");
+}
+
+main section:nth-of-type(2) li:nth-of-type(2) {
+  background-image: url("./images/interstellar.png");
+}
+
+main section:nth-of-type(2) li:nth-of-type(3) {
+  background-image: url("./images/mufasa.png");
+}
+
+main section:nth-of-type(2) li:nth-of-type(4) {
+  background-image: url("./images/babygirl.png");
+}
+
+main section:nth-of-type(2) li:nth-of-type(5) {
+  background-image: url("./images/meeskees.png");
+}
+
+main section:nth-of-type(2) li:nth-of-type(6) {
+  background-image: url("./images/vaiana.png");
+}
+
+/* Stijl voor de actieve slide */
+main section:nth-of-type(2) ul li.active {
+  transform: scale(1.1); /* Maak de actieve slide biggggGGGGG */
+  z-index: 1; /* Zorg ervoor dat de actieve slide boven alles */
+  font-size: 6em; /* lettertype grootte */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* schaduw */
+}
+
+
+
+/* BUTTONS BESTEL NU JE TICKETS WAT IS JOUW LOCATIE */
+
+/* Code voor de plaatsing van de twee buttons inclusief de border */
+
+.toggle-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border: 5px solid white;
+  padding: 1rem;
+  border-radius: 25em;
+}
+
+
+
+
+/* Kleur actieve button + hoe de button is geplaatst */
+
+.toggle-buttons button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: none;
+  border-radius: 20em;
+  background: var(--achtergrond-kleur);
+  box-shadow: none;
+  cursor: pointer;
+  flex: 1;
+}
+
+.toggle-buttons button img {
+  width: 1.5em;
+  height: 1.5em;
+  margin-bottom: 0.5rem;
+  filter: grayscale(100%);
+}
+
+.toggle-buttons button span {
+  color: grey;
+}
+
+.toggle-buttons button.selected {
+  background: var(--pathe-gradient);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .12);
+}
+
+.toggle-buttons button.selected img {
+  filter: brightness(0) invert(1);
+}
+
+.toggle-buttons button.selected span {
+  color: var(--achtergrond-kleur);
+}
+
+.location-section {
+  display: none;
+}
+
+.location-section.visible {
+  display: block;
+}
+  
+
+/* Afters van de button */
+
+.toggle-buttons button.near-cinema::after {
+  content: "bioscopen in de buurt";
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.toggle-buttons button.favorite-cinema::after {
+  content: "Mijn favoriete bioscopen";
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.toggle-buttons button::after {
+  color: grey;
+}
+
+.toggle-buttons button.selected::after {
+  color: var(--achtergrond-kleur);
+}
+  
+
+  /* NIEUWS CAROUSEL THINGIE */
+
+  main section:nth-of-type(5) {
+    position: relative;
+    max-width: 1500px;
+    height: 20em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  main section:nth-of-type(5) ul {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 2%;
+    position: relative;
+  }
+  
+  main section:nth-of-type(5) li {
+    min-width: 70vw;
+    height: 50vw;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.3s ease, font-size 0.3s ease; /* Overgangen toegevoegd */
+  }
+  
+  
+  main section:nth-of-type(2) button:nth-of-type(1),
+  main section:nth-of-type(5) button:nth-of-type(1) {
+    left: 0em;
+    transform: translateY(-50%) rotate(180deg);
+    border-radius: 20em 0 0 20em;
+  }
+  
+  main section:nth-of-type(2) button:nth-of-type(2),
+  main section:nth-of-type(5) button:nth-of-type(2) {
+    right: 0em;
+    transform: translateY(-50%);
+    border-radius: 20em 0 0 20em;
+  }
+
+  main section:nth-of-type(5) li:nth-of-type(1) {
+    background-image: url("./images/nieuws1.png");
+  }
+  
+  main section:nth-of-type(5) li:nth-of-type(2) {
+    background-image: url("./images/nieuws2.png");
+  }
+  
+  main section:nth-of-type(5) li:nth-of-type(3) {
+    background-image: url("./images/nieuws3.png");
+  }
+  
+  main section:nth-of-type(5) li:nth-of-type(4) {
+    background-image: url("./images/nieuws4.png");
+  }
+  
+  main section:nth-of-type(5) li:nth-of-type(5) {
+    background-image: url("./images/nieuws5.png");
+  }
+  
+  main section:nth-of-type(5) li:nth-of-type(6) {
+    background-image: url("./images/nieuws6.png");
+  }
+
+  /* Stijl voor de actieve slide */
+  main section:nth-of-type(2) ul li.active {
+    transform: scale(1.2); /* Maak de actieve slide ietsie pietsie groter */
+    z-index: 1; /* Zorgt ervoor dat de actieve slide bovenaan staat */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* schaduw */
+  }
+
+
+
+
+main section:nth-of-type(2) h2 {
+  font-family: "Arial";
+  font-size: 1.3em;
+  color: white;
+}
+
+/* Invultekstbox form */
+main section:nth-of-type(2) form {
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 80%;
+  margin: 5% auto;
+}
+
+/******************************/
+/* Articles ----------------- */
+/******************************/
+    
+/* afbeeding */
+
+article {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+article img {
+  max-width: 20%;
+  margin: 0em 1em;
+}
+
+section > article:nth-of-type(n) {
+  padding: 1em 0;
+}
+
+/******************************/
+/*  Achtergrond van articles  */
+/******************************/
+
+article h3,
+article p {
+  margin: 1em 0;
+  padding: 0 1em;
+  line-height: 1.5;
+}
+
+/* Article button layout */
+
+article a {
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  
+  padding: 0.8em 1.9em;
+  margin: 1em;
+  
+  background: var(--pathe-gradient);
+  border: none;
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .12);
+  
+  font-family: "Pathe";
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+article a:hover {
+  transform: scale(1.05);
+}
+
+article:nth-of-type(2) {
+    background-image: url("./images/gogaming.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+
+    display:grid;
+    grid-template-rows:12em max-content;
+}
+
+article:nth-of-type(2) h3, article:nth-of-type(4) h3 {
+  font-size: 1.5em;
+}
+
+article:nth-of-type(1), article:nth-of-type(3) {
+  display:grid;
+  grid-template-rows:6em max-content;
+  }
+
+article:nth-of-type(4) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./images/giftcard.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 12em max-content;
+  padding: 2em 0em;
+  margin: 2em 0em;
+}
+
+
+/* ------ Footer ------ */
+
+footer {
+  background-color: var(--pathe-kleur);
+  height: 5em;
+  text-align: center;
+  display: flex;
+  align-items: center; /* verticaal centreren */
+  justify-content: center; /* hzontaal centreren */
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  background-color: var(--pathe-kleur);
+  padding: 0;  /* nooit geen padding */
+  list-style: none; /* geen rare shit bolletjes overal */
+  margin: 0; /* Haalt de normale margin eraf */
+}
+
+footer li {
+  margin: 0 10px; /* Adjust spacing as needed */
+  border: none; /* Ensure no border */
+  padding: 0; /* Ensure no padding */
+}
+
+footer img {
+  height: 3em; /* Increase the height as needed */
+  max-height: 100%; /* Ensure images fit within the footer */
+  background: none; /* Ensure no background */
+  border: none; /* Ensure no border */
+}
+
+
+
+/* NIEUW - 6 JAN */
+
+/* carousel */
+
+.carousel {
+  display: flex;
+  flex-direction: column; /* Stack the images and button vertically */
+  align-items: center;    /* Center the items horizontally */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem; /* Add spacing between items */
+  padding: 1rem;
+  gap: 20px;
+}
+
+.carousel button {
+  margin-top: 1rem; /* Add some space between the carousel images and the button */
+  background-color: var(--merk-kleur);
+  padding: 2%;
+  border-radius: 6px;
+  border-style: none;
+  background-color: var(--pathe-kleur);
+  background: var(--pathe-gradient);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+
+.carousel img {
+  gap: 5rem;
+}
+
+
+/* Hide Scrollbar */
+.carousel::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.carousel a {
+  flex-shrink: 0;
+  scroll-snap-align: center; /* Center items in the viewport */
+}
+
+/* Images */
+.slides-item {
+  width: 200px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.slides-item:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+/* HAMBURGERMENU */
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.menu-toggle img {
+  width: 1.2em;
+  height: auto;
+}
+
+.menu-toggle a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* HAMBURGERMENU PANEEL */
+
+.menu-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background: white;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.menu-panel.active {
+  right: 0;
+}
+
+.menu-search {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #f5f5f5;
+  color: #151515;
+}
+
+.menu-search input[type="text"] {
+  width: 100%;
+  line-height: 3.0625em;
+  padding: 0 1.125em;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.menu-search input[type="text"]::placeholder {
+  color: #151515;
+}
+
+.menu-search input[type="image"] {
+  width: 1.2em;
+  height: 1.2em;
+  position: absolute;
+  right: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.menu-links {
+  height: calc(100% - 60px); /* calc voor dat eht niet onder de form gaat bij hamburgermenu ipv klooien met margins */
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-links ul {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4em;  /* Space voor Mijn Club Pathe */
+  width: 100%;
+}
+
+
+
+.menu-links li {
+  width: 100%;
+  min-height: 3.375em;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.menu-links a {
+  border-top: 1px solid #f5f5f5;
+  color: #151515;
+  display: flex;
+  align-items: center;
+  height: 3.375em;
+  padding: 0 1.125em;
+  text-decoration: none;
+  font-size: 1em;
+  width: 100%;
+}
+
+
+.menu-links ul::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-links li:first-child a {
+  border-top: none;
+  margin-top: 1em;
+}
+
+/* PANEEL LAATSTE OPTIE GELE ACHTERGROND */
+
+.menu-links li:last-child {
+  position: fixed;
+  bottom: 0;
+  right: -100%;
+  width: 80%;
+  background-color: #ffc426;
+  z-index: 1001;
+  transition: right 0.3s ease;
+}
+
+
+.menu-links li:last-child a {
+  color: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.375em;
+  line-height: 3.375em;
+  padding: 0 0.6em;
+  text-decoration: none;
+  font-size: 1em;
+  font-family: "Pathe";
+  text-transform: uppercase;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.menu-links li:last-child a::after {
+  content: '';
+  width: 1.5em;
+  height: 1.5em;
+  background: url('./images/clubpathe.svg') no-repeat center;
+  background-size: contain;
+}
+
+/* Laat alleen het onderste blokje zien in de hamburgermenu indien het is uitgeklapt (was eerst niet zo) */
+.menu-panel.active .menu-links li:last-child {
+  right: 0;
+}
+
+
+/* Focus styles for form inputs */
+.menu-search input[type="text"],
+.menu-search input[type="image"] {
+  outline: none;
+}
+
+.menu-search input[type="text"]:focus,
+.menu-search input[type="image"]:focus {
+  outline: 2px solid orangered;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Focus stijlen stylo flex brrrrrrr */
+.menu-links a {
+  outline: none;
+  padding: 8px;
+  display: block;
+}
+
+.menu-links a:focus {
+  outline: 2px solid orangered;
+  outline-offset: -2px;
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 4px;
+}
+
+.menu-panel:focus-within {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Geen outline voor muismensen */
+.menu-links a:focus:not(:focus-visible) {
+  outline: none;
+  background-color: transparent;
+}
+
+
+
+
+/* Darkmode!!!!!! https://www.youtube.com/watch?v=wodWDIdV9BY  (wat een gekut, Sanne's has() methode brak)*/
+
+.darkmode-toggle {
+  border-top: none ;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.darkmode-toggle::before {
+  content: '';
+  font-size: 1.2em;
+}
+
+/* Create no-darkmode class */
+.no-darkmode {
+  filter: invert(0) ;
+}
+
+/* Dark mode styles */
+.darkmode {
+  background-color: #1a1a1a;
+}
+
+.darkmode body {
+  background-image: url("./images/fullbackground.png");
+  filter: invert(1);
+}
+
+
+/* Target background specifically */
+.darkmode main {
+  background-image: url("./images/fullbackground.png");
+  filter: invert(1);
+}
+
+/* Un-invert content inside main */
+.darkmode main > * {
+  filter: invert(1);
+}
+
+/* Keep nav and form elements original */
+.darkmode header,
+.darkmode nav,
+.darkmode form {
+  filter: invert(0);
+}
+
+/* Om een of andere rare rede werkt dit alleen wanneer ik het apart zet */
+.darkmode nav ul li img,
+.darkmode .menu-toggle img {
+  filter: invert(0);
+}
+
+.darkmode img[src="./images/popcorn.svg"] {
+  filter: invert(1);
+}
+
+.darkmode nav ul li a {
+  color: inherit;
+}
+
+/* Invert text elements */
+.darkmode main h1,
+.darkmode main h2,
+.darkmode main h3,
+.darkmode main p {
+  color: white;
+}
+
+/* Prevent inversion of nav icons */
+.darkmode nav img,
+.darkmode form img,
+.darkmode .menu-search img {
+  filter: invert(1);
+}
+
+/* Invert text except article 2 and 4 */
+.darkmode h1:not(article:nth-of-type(2) h1, article:nth-of-type(4) h1),
+.darkmode h2:not(article:nth-of-type(2) h2, article:nth-of-type(4) h2),
+.darkmode h3:not(article:nth-of-type(2) h3, article:nth-of-type(4) h3),
+.darkmode p:not(article:nth-of-type(2) p, article:nth-of-type(4) p) {
+  filter: invert(1);
+}
+
+
+
+
+/* Waarbij? Paasei. Volgensmij is deze kapot? */
+
+.subscription-button {
+  position: relative;
+}
+
+.subscription-button::before {
+  content: '';
+  position: fixed;
+  left: -100px;
+  bottom: 20px;
+  width: 100px;
+  height: 100px;
+  background: url("./images/kip.svg") no-repeat center/contain;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;  /* Verhoog z-index */
+}
+
+.subscription-button:hover::before,
+.subscription-button:focus::before {
+  animation: slideInOut 3s ease-in-out forwards;  /*  gaat voort!!!!!!!!! maar dan geanimeerd en eerst vager */
+}
+
+@keyframes slideInOut {
+  0% { 
+      transform: translateX(0);
+      opacity: 0;
+  }
+  20% { 
+      transform: translateX(calc(100vw + 100px));
+      opacity: 1;
+  }
+  80% {
+      transform: translateX(calc(100vw + 100px));
+      opacity: 1;
+  }
+  100% { 
+      transform: translateX(calc(200vw));  /* Use gebruik viewport grootte */
+      opacity: 0;
+  }
+}
+
+
+/* Kerstthema */
+
+/* Christmas knoppie */
+.christmas-toggle {
+  border-top: none ;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* thema aanpassen met has van sanne :))))) :has() */
+body:has(.christmas-toggle[aria-pressed="true"]) {
+  background-image: url('./images/kerstbackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.logo img {
+  min-height: 2.3em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Text color changes */
+body:has(.christmas-toggle[aria-pressed="true"]) .white-text {
+  color: var(--text-color);
+}
+
+html:has(.christmas-toggle:checked) .white-text {
+  color: #ffb3b6;
+}
+
+/* Smooth transitions */
+.logo img,
+.white-text {
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+/* thema switchen met has en selectoren voor hetgeen wat gekozen moet worden */
+html:has(.christmas-toggle[aria-pressed="true"]) {
+  /* Tpak alle witte elementen */
+  .nav-text,
+  .menu-links a,
+  .footer-text,
+  .white-text,
+  h1, h2, h3,
+  p,
+  .menu-search input::placeholder,
+  .button-text {
+    color: var(--theme-pink);
+  }
+
+html:has(.christmas-toggle[aria-pressed="true"]) {
+background: 
+  linear-gradient(rgba(255, 179, 182, 0.3), rgba(255, 179, 182, 0.3)),
+  url('./images/kerstbackground.png') center/cover no-repeat fixed;
+  background-blend-mode: soft-light;
+}
+
+  svg[fill="white"],
+.svg-white {
+  fill: var(--theme-pink);
+}
+
+  /* Target white borders */
+  [class*="white-border"],
+  .border-white {
+    border-color: var(--theme-pink);
+  }
+
+  /* Target white SVG fills */
+  svg[fill="white"],
+  .svg-white {
+    fill: var(--theme-pink);
+  }
+}

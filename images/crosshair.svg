@@ -1,0 +1,15 @@
+<svg id="icon_crosshair" data-name="icon/black/favoriet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.786 28.242">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Oval" class="cls-1" d="M9.356,18.828a9.414,9.414,0,1,1,9.356-9.414A9.4,9.4,0,0,1,9.356,18.828Zm0-17.113a7.7,7.7,0,1,0,7.651,7.7A7.684,7.684,0,0,0,9.356,1.715Z" transform="translate(5.038 5.069)"/>
+  <ellipse id="Oval-2" data-name="Oval" class="cls-1" cx="5.038" cy="5.069" rx="5.038" ry="5.069" transform="translate(9.356 9.414)"/>
+  <rect id="Rectangle_6" data-name="Rectangle 6" class="cls-1" width="6.477" height="1.448" rx="0.724" transform="translate(0 13.759)"/>
+  <rect id="Rectangle_6-2" data-name="Rectangle 6" class="cls-1" width="6.477" height="1.448" rx="0.724" transform="translate(22.31 13.759)"/>
+  <rect id="Rectangle_6-3" data-name="Rectangle 6" class="cls-1" width="6.517" height="1.439" rx="0.72" transform="translate(15.033 0) rotate(90)"/>
+  <rect id="Rectangle_6-4" data-name="Rectangle 6" class="cls-1" width="6.517" height="1.439" rx="0.72" transform="translate(15.033 21.724) rotate(90)"/>
+</svg>

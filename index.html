@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Pathé bioscopen - Films, tickets en meer"/>
+    <link rel="stylesheet" href="./home-style.css"/>
+    <title>Pathé - Films en Bioscopen</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAVBAR -->
+
+  <header>
+    <nav> 
+      <ul>
+        <li class="logo"><img src="./images/logo-white.png" alt="Pathe logo"/></li>         <!-- Dit heef een class omdat het kan veranderen -->
+        <li><img src="./images/movie.svg" alt="films"/><a href="#film.html">Films</a></li>
+        <li><img src="./images/time.svg" alt="time"/><a href="#tijden">Tijden</a></li>
+        <li><img src="./images/location.svg" alt="location-pin"/><a href="#club">Bioscopen</a></li>
+        <li class="menu-toggle"><img src="./images/menu.svg" alt="menu"/><a href="#menu">Menu</a></li>
+      </ul>
+    </nav>
+  
+    <div class="menu-panel" aria-hidden="true">
+      <form class="menu-search">
+        <input type="text" placeholder="Zoeken">
+        <input type="image" src="./images/loep.svg" alt="Zoeken">
+      </form>
+      <nav class="menu-links">
+        <ul>
+          <li><a href="#darkmode" class="darkmode-toggle" tabindex="0">Darkmode</a></li>
+          <li><a href="#christmas" class="christmas-toggle" tabindex="0">Christmas Theme</a></li>
+          <li><a href="#home" tabindex="0" >Home</a></li>
+          <li><a href="#films" tabindex="0">Films</a></li>
+          <li><a href="#tijden" tabindex="0">Tijden en tickets</a></li>
+          <li><a href="#bioscopen" tabindex="0">Bioscopen</a></li>
+          <li><a href="#events" tabindex="0">Specials & Events</a></li>
+          <li><a href="#club" tabindex="0">Club Pathé</a></li>
+          <li><a href="#abonnement" tabindex="0">Abonnementen</a></li>
+          <li><a href="#meer" tabindex="0">Meer van Pathé</a></li>
+          <li><a href="#kids" tabindex="0">Pathé kids</a></li>
+          <li><a href="#service" tabindex="0">Klantenservice</a></li>
+          <li><a href="#business" tabindex="0">Pathé Business</a></li>
+          <li><a href="#pers" tabindex="0">Pers</a></li>
+          <li><a href="#privacy" tabindex="0">Privacy Statement</a></li>
+          <li><a href="#voorwaarden" tabindex="0">Voorwaarden</a></li>
+          <li><a href="#cookies" tabindex="0">Cookies</a></li>
+          <li><a href="#work" tabindex="0">Werken bij Pathé</a></li>
+          <li><a href="#english" tabindex="0">English</a></li>
+          <li><a href="#mijnclub" tabindex="0">Mijn club Pathé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ <!-- DIT ZIJN BUTTONS-->
+ <main>
+    <section>
+     <!-- <h2>text screenreader</h2>   display none in css - DIT ZIJN BUTTONS-->
+      <ul>
+        <li>NU</li>
+        <li>Binnenkort</li>
+        <li>Specials</li>
+        <li>Kids</li>
+      </ul>
+    </section>
+ 
+    <!-- carousel films -->
+
+    <section aria-label="Bekijk de films die nu spelen">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <button></button>
+      <button></button>
+    </section>
+
+
+     <!-- <button class="buy-now">Koop nu</button> zat na de buttons en voor /sectio -->
+
+    <!-- carousel films END -->
+
+    <section>
+      <h2>Bestel nu je tickets</h2>
+        <div class="toggle-buttons" role="group" aria-label="Kies je bioscoop voorkeur">
+          <button type="button" class="selected near-cinema" aria-pressed="true" aria-label="Bioscopen in de buurt">
+              <img src="./images/crosshair.svg" alt="">
+          </button>
+          <button type="button" class="favorite-cinema" aria-pressed="false" aria-label="Mijn favoriete bioscopen">
+              <img src="./images/heartfilled.svg" alt="">
+          </button>
+      </div>
+  </section>
+
+      <!-- LOCATIEFORM -->
+
+      <section class="location-section">
+        <h2>Wat is jouw locatie?</h2>
+        <form action="none">
+            <input type="text" id="fname" name="fname" placeholder="Postcode of plaats">
+            <input type="image" name="Name of image button" src="./images/location-pin.png" alt="location">
+        </form>
+    </section>
+
+         <!-- Nieuws carousel -->
+
+      <section aria-label="Lees het laatste nieuws over Pathe">
+        <h2>Nieuws</h2>
+          <ul>
+            <li aria-label="Pathe ypenburg is officieel geopend!"></li>
+            <li aria-label="Bekijk het nieuwe operaseizoen bij Pathé"></li>
+            <li aria-label="Bridget Jones: Mad about the boy zie je tijdens de volgende Ladies Night!"></li>
+            <li aria-label="In pathe scheveningen zit je lekkerder in de nieuwe relax seats"></li>
+            <li aria-label="Ontdek de relax seats bij Pathe Haarlem"></li>
+          </ul>
+        <button></button>
+      <button></button>
+    </section>
+
+    <section>
+      <!-- <h2>Club Pathe Abonnementen</h2>  hidden-->
+      <article> 
+        <img src="./images/popcorn.svg" alt="">
+        <h3>Club Pathe Abonnementen</h3>
+        <p>Van film genieten is nog nooit zo voordelig geweest. Met de flexibele Club Pathé abonnementen kun je (onbeperkt) op alle dagen van de week naar de film, in alle Pathé bioscopen in Nederland. Eén keer per maand, onbeperkt of met de hele familie? Door de diverse bundels en extra’s is er altijd een abonnement dat bij je past!</p>
+        <a href="#" class="subscription-button">Bekijk de abonnementen</a>      </article>
+
+    <article> 
+        <h3>ontdek meer van pathe</h3>
+        <p>Naast fantastische filmervaringen beleef je nog veel meer bij Pathe. Game competitief of strategisch bij Go!Gaming en X-Cube. Boek een privebioscoop bij The(Any)Thing. Of verwen je smaakpapillen met het Filmdiner of een signature cocktail in een van de Pathe bars.</p>
+        <a href="#">Ontdek meer</a>
+    </article>
+
+    <article> 
+      <img src="./images/popcorn.svg" alt="">
+      <h3>Beleef meer met Club Pathe</h3>
+      <p>Als je regelmatig naar Pathe gaat, dan verdien je toch iets extras? Dat vinden wij ook! Daarom is er Club Pathe, ons nieuwe loyaliteitsprogramma. Als member doe je gemakkelijk mee aan leuke (win)acties en spaar je bij elk bioscoopbezoek voor kortingen, gratis producten en leuke extra's. Het enige wat je hoeft te doen om te profiteren van deze voordelen s een gratis Club Pathe account aanmaken.</p>
+      <a href="#">Vertel me meer</a>
+    </article>
+
+    <article> 
+        <h3>Geef kippenvel cadeau met de Pathe giftcard</h3> <!-- Bewust geen alt omdat dit vervelend is met screenreader-->
+        <p>Of je nu wilt lachen om een komedie, huilen bij een ontroerende drama of je laten meeslepen door een spannende actiefilm, de Pathe giftcard biedt eindeloze mogelijkheden om samen te genieten van de magie van film.</p>
+        <a href="#">Direct bestellen</a>
+    </article>
+    </section>
+  </main>
+
+  <!-- UL maken van footercontent -->
+    <footer>
+      <ul>
+       <li><img src="./images/instagram.svg" alt="Instagram"></li>
+       <li><img src="./images/facebook.svg" alt="Facebook"></li>
+       <li><img src="./images/tiktok.svg" alt="TikTok"></li>
+       <li><img src="./images/youtube.svg" alt="YouTube"></li>
+       <li><img src="./images/twitter.svg" alt="Twitter of X"></li>
+      </ul>
+   </footer>
+   <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>

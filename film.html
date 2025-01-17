@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wicked</title>
+    <link rel="stylesheet" href="./film-style.css" />
+  </head>
+  
+  <body>
+  
+ 
+  <!-- NAVBAR -->
+
+  <header>
+    <nav> 
+        <ul>
+            <li class="logo"><img src="./images/logo-white.png" alt="Pathe logo"/></li>
+            <li class="menu-toggle"><img src="./images/menu.svg" alt="menu"/><a href="#menu">Menu</a></li>
+        </ul>
+    </nav>
+  
+    <div class="menu-panel" aria-hidden="true">
+      <form class="menu-search">
+        <input type="text" placeholder="Zoeken">
+        <input type="image" src="./images/loep.svg" alt="Zoeken">
+      </form>
+      <nav class="menu-links">
+        <ul>
+          <li><a href="#darkmode" class="darkmode-toggle" tabindex="0">Darkmode</a></li>
+          <li><a href="#christmas" class="christmas-toggle" tabindex="0">Christmas Theme</a></li>
+          <li><a href="#home" tabindex="0" >Home</a></li>
+          <li><a href="#films" tabindex="0">Films</a></li>
+          <li><a href="#tijden" tabindex="0">Tijden en tickets</a></li>
+          <li><a href="#bioscopen" tabindex="0">Bioscopen</a></li>
+          <li><a href="#events" tabindex="0">Specials & Events</a></li>
+          <li><a href="#club" tabindex="0">Club Pathé</a></li>
+          <li><a href="#abonnement" tabindex="0">Abonnementen</a></li>
+          <li><a href="#meer" tabindex="0">Meer van Pathé</a></li>
+          <li><a href="#kids" tabindex="0">Pathé kids</a></li>
+          <li><a href="#service" tabindex="0">Klantenservice</a></li>
+          <li><a href="#business" tabindex="0">Pathé Business</a></li>
+          <li><a href="#pers" tabindex="0">Pers</a></li>
+          <li><a href="#privacy" tabindex="0">Privacy Statement</a></li>
+          <li><a href="#voorwaarden" tabindex="0">Voorwaarden</a></li>
+          <li><a href="#cookies" tabindex="0">Cookies</a></li>
+          <li><a href="#work" tabindex="0">Werken bij Pathé</a></li>
+          <li><a href="#english" tabindex="0">English</a></li>
+          <li><a href="#mijnclub" tabindex="0">Mijn club Pathé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    
+
+   <!-- Hero header met video - vragen over divs wegens video???    
+    <video autoplay muted loop class="hero-video">
+      <source src="./video/wicked" type="video/mp4" aria-label="Bekijk de trailer van Wicked"/> laat video zitten tot het einde als het niet lukt, niet doen -
+    </video>
+    -->
+    
+  <main>
+
+   <!-- Hero header -->
+
+    <section>
+      <img src="./images/wicked.png" alt="Wicked poster"/>
+      <ul>
+        <li><img src="./images/dolby-atmos.svg" alt="beschikbaar in dolby atmos"/></li>
+        <li><img src="./images/dolby-cinema.svg" alt="beschikbaar in dolby cinema"/></li>
+        <li><img src="./images/screenx.svg" alt="beschikbaar in screenx"/></li>
+      </ul>
+      <h1>Wicked (Originele Versie)<a href="#" aria-label="Add to favorites"></a>
+      </h1>
+      <button>Tijden en tickets</button>
+    </section>
+    
+    <!-- Samenvatting -->
+
+  <section class="Samenvatting">
+    <img src="./images/9.png" alt="Vanaf 9 jaar"/>
+    <img src="./images/eng.png" alt="Deze film bevat angstige beelden"/>
+    <p>Release: 5-12-2024</p>
+    <p>Wicked is al twintig jaar een van de meest geliefde musicals in het theater en is deze kerst nu eindelijk op het witte doek te bewonderen als een spectaculaire film.</p>
+    <h3>Extra informatie</h3>
+    <p>Wicked is ook te zien in het <a href="#">Nederlands</a>.</p>
+    <input type="checkbox" class="read-more-state" id="post-1" />
+    <p class="read-more-wrap">In Wicked maken we kennis met het nog onbekende verhaal van de Witches of Oz. Emmy-, Grammy- en Tony-winnares Cynthia Erivo (Harriet, de Broadway-versie van The Color Purple) is te zien als als Elphaba, een jonge vrouw die zich onzeker voelt vanwege haar ongebruikelijke groene huid en die haar ware kracht nog moet ontdekken. Grammy-winnares en mondiale superster Ariana Grande speelt Glinda, een populaire, geprivilegieerde en ambitieuze jonge vrouw die er nog achter moet komen wie ze zelf echt is. De twee leren elkaar kennen als studenten aan de Shiz Universiteit in het magische Land van Oz en sluiten een onwaarschijnlijke maar innige vriendschap. Na een ontmoeting met de Wizard of Oz wordt hun vriendschap op de proef gesteld en zullen ze heel verschillende paden bewandelen. Door Glinda’s verlangen naar populariteit zal ze bezwijken voor de verleidingen van de macht. Elphaba is juist vastberaden om trouw te blijven aan zichzelf en aan de mensen om haar heen, wat onverwachte en schokkende gevolgen zal hebben voor haar toekomst. Na hun bijzondere avonturen in Oz zullen ze uiteindelijk bekend komen te staan als Glinda de Good Witch en Wicked Witch of the West.</p>
+    <label for="post-1" class="read-more-trigger"></label>
+  </section>
+
+<!-- Tijden en tickets -->
+
+    <section>
+      <h2>Tijden en tickets</h2>
+      <button class="buttonfilm">Kies een Bioscoop</button>
+    </section>
+
+<!-- Trailers en fotos -->
+
+<section>
+  <h2>Trailers en foto's</h2>
+  <p>1 video</p>
+  <img src="./images/trailerphoto.png" alt="trailerphoto">
+  <h3>fotos</h3>
+  <p>10 stills</p>
+  <ul class="photos-list">
+      <li><img src="./images/fotos/foto1.webp" alt="foto 1" class="gallery-img" tabindex="0"></li>
+      <li><img src="./images/fotos/foto2.webp" alt="foto 2" class="gallery-img" tabindex="0"></li>
+      <li><img src="./images/fotos/foto3.webp" alt="foto 3" class="gallery-img" tabindex="0"></li>
+      <li><img src="./images/fotos/foto4.webp" alt="foto 4" class="gallery-img" tabindex="0"></li>
+      <li><img src="./images/fotos/foto5.webp" alt="foto 5" class="gallery-img" tabindex="0"></li>
+      <li><img src="./images/fotos/foto6.webp" alt="foto 6" class="gallery-img" tabindex="0"></li>
+      <li><img src="./images/fotos/foto7.webp" alt="foto 7" class="gallery-img" tabindex="0"></li>
+      <li><img src="./images/fotos/foto8.webp" alt="foto 8" class="gallery-img" tabindex="0"></li>
+      <li><img src="./images/fotos/foto9.webp" alt="foto 9" class="gallery-img" tabindex="0"></li>
+      <li><img src="./images/fotos/foto10.webp" alt="foto 10" class="gallery-img" tabindex="0"></li>
+  </ul>
+</section>
+
+<!-- Cast and crew -->
+
+<section>
+  <h2>Cast en crew</h2>
+  <ul>
+    <li><img src="./images/persoon1.webp" alt="Regisseur"><p>Jon M. Chu</p></li>
+    <li><img src="./images/persoon2.webp" alt="Cynthia Erivo"><p>Cynthia Erivo</p></li>
+    <li><img src="./images/persoon3.webp" alt="Ariana Grande"><p>Ariana Grande</p></li>
+    <li><img src="./images/persoon4.webp" alt="Jonathan Bailey"><p>Jonathan Bailey</p></li>
+    <li><img src="./images/persoon5.webp" alt="Jeff Goldblum"><p>Jeff Goldblum</p></li>
+    <li><img src="./images/persoon6.webp" alt="Michelle Yeoh"><p>Michelle Yeoh</p></li>
+  </ul>
+</section>
+
+
+  <!-- Reviews -->
+
+  <section>
+    <h2>Reviews</h2>
+    <button class="buttonfilm">schrijf een recentie</button>
+  </section>
+
+  <!-- Footer -->
+
+    <footer>
+      <ul>
+       <li><img src="./images/instagram.svg" alt="Instagram"></li>
+       <li><img src="./images/facebook.svg" alt="Facebook"></li>
+       <li><img src="./images/tiktok.svg" alt="TikTok"></li>
+       <li><img src="./images/youtube.svg" alt="YouTube"></li>
+       <li><img src="./images/twitter.svg" alt="Twitter of X"></li>
+      </ul>
+   </footer>
+   <script type="text/javascript" src="./script.js"></script>
+
+
+   <!-- Modal box -->
+   <div class="modal" role="dialog" aria-label="Afbeelding volledig scherm" aria-hidden="true">
+    <button class="modal-close" aria-label="Sluit afbeelding">&times;</button>
+    <img class="modal-content" src="" alt="">
+</div>
+
+  </body>
+</html>
