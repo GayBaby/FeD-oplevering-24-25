@@ -213,13 +213,29 @@ Additionele animaties aangepast waar nodig.
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje2.jpg" width="375px" alt="top">
+  <img src="readme-images/carousel.png" width="375px" alt="top">
+
+  Ik heb nachtmerrsies gehad over de carousel. Hij heeft echt ales gebroken, en het fixen hiervan was echt heel lastig. Sybren heeft uiteindelijk uit frustrai=tie een nieuwe carousel gebouwd die wederom niet werkte. het was echt een drama.
+
+  Ik heb best veel opgepikt en snap nu veel meer dan vorig jaar. ik weet nu wel hoe ik correct nth of types moet gebruiken en niet alleen maar .classes continu. Ook snap ik beter hoe javascript werkt, maar ook dit is eigenlijk nogsteeds best ingewkkeld.
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/carousel.png" width="375px" alt="bummer">
+    Ik heb nachtmerrsies gehad over de carousel. Hij heeft echt ales gebroken, en het fixen hiervan was echt heel lastig. Sybren heeft uiteindelijk uit frustrai=tie een nieuwe carousel gebouwd die wederom niet werkte. het was echt een drama.
+
+Uiteindelijk zijn de volgende onderdelen niet gelukt:
+
+section 1 ul li NU FILMS etc. animeren als buttons en als filter gebruiken bij de carousel. (als de carousel werkt, dan werkt het, ik ga er niet mee klooien. alle pogingen hebben het gesloopt)
+W3C image modal box. ik weet nogsteeds niet waarom dit brak.
+
+Ik had een leuke easteregg van een kip die langsrende. dit is ook stuk.
+Ik kreeg de achtergrond niet veranderd met een kerstthema, ook niet op de verschillende manieren van Sanne. bagger............. bah
+
+Code is niks voor mij. 
+
 </details>
 
 
