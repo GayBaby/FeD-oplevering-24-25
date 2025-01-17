@@ -229,13 +229,13 @@ Additionele animaties aangepast waar nodig.
 
 Uiteindelijk zijn de volgende onderdelen niet gelukt:
 
-section 1 ul li NU FILMS etc. animeren als buttons en als filter gebruiken bij de carousel. (als de carousel werkt, dan werkt het, ik ga er niet mee klooien. alle pogingen hebben het gesloopt)
-W3C image modal box. ik weet nogsteeds niet waarom dit brak.
+section 1 ul li NU FILMS etc. animeren als buttons en als filter gebruiken bij de carousel. (als de carousel werkt, dan werkt het, ik ga er niet mee klooien. alle pogingen hebben het gesloopt) 
+W3C image modal box. ik weet nogsteeds niet waarom dit brak. Dit hoort redelijk straightforward te zijn, ook met de modal box lessen en opdrachten, maar iedere stap sloopte iets anders. Ik heb het op een gegeven moment opgegeven.
 
 Ik had een leuke easteregg van een kip die langsrende. dit is ook stuk.
 Ik kreeg de achtergrond niet veranderd met een kerstthema, ook niet op de verschillende manieren van Sanne.
 
-Code is niks voor mij. 
+Code is niks voor mij. Ik ben echt een designer.
 
 </details>
 
